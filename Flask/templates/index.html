@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Light Control and Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+         console.log("This is working");
+        })
+    </script>
+    <div class="container">
+        <h1>IOT Light Control and Monitoring</h1>
+        <button onClick = "window.location.href = 'temp'"> Temp</button>
+        <button id="btnRefresh">Refresh Light Data</button>
+        <div id="dataDisplay"></div>
+        
+        
+        <div style = "display:none;">
+        <select id="ledState">
+            <option value="ON">Turn LED On</option>
+            <option value="OFF">Turn LED Off</option>
+        </select>
+        <button id="btnControlLED">Control LED</button>
+        </div>
+        
+    </div>
+    
+        <canvas id="hourlyLightChart" width = "400" height = "200"></canvas>
+
+    
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
