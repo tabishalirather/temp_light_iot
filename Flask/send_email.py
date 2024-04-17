@@ -5,7 +5,6 @@ from sendgrid.helpers.mail import Mail
 app = Flask(__name__)
 
 # Set up SendGrid API key
-SENDGRID_API_KEY = "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"
 
 @app.route('/send-email', methods=['GET'])
 def send_email():
